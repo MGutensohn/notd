@@ -23,7 +23,7 @@ class NotesController < ApplicationController
     @note = Note.new(note_params)
     if @note.save
       # Assign the tags
-      params[:tags].split(',').each do |tag_name|
+      params[:tags].split(', ').each do |tag_name|
         tag = Tag.where(name: tag_name).first_or_create
         @note.tags << tag
       end
