@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'notes#index'
 
   resources :notes
-  resources :tags, except: [:show]
+  resources :tags
 
 
   # The following are replaced with the 'resources :notes' above

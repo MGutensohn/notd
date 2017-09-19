@@ -18,6 +18,10 @@ class TagsController < ApplicationController
     @tag = Tag.new
   end
 
+  def show
+    @notes = Note.joins(:note_tags).where(note_tags: {:tag_id => params[:id]})
+  end
+
   def edit
   end
 
