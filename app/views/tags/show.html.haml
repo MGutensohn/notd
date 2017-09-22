@@ -1,15 +1,10 @@
-= link_to 'New Note', new_note_path, class: 'button button-primary'
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th
-
-  %tbody
-    - @notes.each do |note|
-      %tr
-        %td= link_to note.title, note
-        %td
-          = link_to 'Edit', edit_note_path(note)
-          = link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure you want to delete this note?' }
+- @notes.each do |note|
+  .four.columns.note
+    .edit-delete
+      = link_to 'Edit', edit_note_path(note)
+      = link_to 'X', note, method: :delete, data: { confirm: 'Are you sure you want to delete this note?' }
+    .title= note.title
+    %p= note.content
+    .row
+      - note.attachments.each do |attachment|
+        = link_to attachment.document_file_name, attachment.document.url, class: 'button attachment'

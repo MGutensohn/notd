@@ -1,3 +1,35 @@
+.add-note{
+  margin: 1.3rem 0;
+}
+
+.note {
+    padding: 8px;
+    margin: 1rem;
+    box-shadow: 4px 4px 6px black;
+    background-color: #e6e6e8;
+}
+
+.title{
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.edit-delete{
+  float: right;
+  margin: 0 .5vw;
+}
+
+.edit-delete a {
+    text-decoration: none;
+    color: #9191a0;
+}
+
+a.attachment{
+  padding: 0px 12px;
+  height: 32px;
+  line-height: 32px;
+}
+
 .container {
     max-width: 800px; }
 .header {

@@ -16,6 +16,8 @@
             %li.navbar-item= link_to 'Home', root_path, class: 'navbar-link'
             %li.navbar-item= link_to 'Notes', notes_path, class: 'navbar-link'
             %li.navbar-item= link_to 'Tags', tags_path, class: 'navbar-link'
+            %li.navbar-item= link_to 'New Note', new_note_path, class: 'button button-primary add-note'
+
 
       - if notice.present?
         = notice
